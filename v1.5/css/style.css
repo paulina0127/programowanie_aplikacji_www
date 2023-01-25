@@ -1,0 +1,271 @@
+/* ----------- GLOBAL STYLES ----------- */
+:root {
+  --dark-green: #549484;
+  --green: #69c2b5;
+  --light-green: #e5f5ea;
+  --font: "Lato", sans-serif;
+  --spacing: 2px;
+  --radius: 5px;
+  --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s linear;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font);
+  font-size: 17px;
+}
+
+h1 {
+  margin: 5px 15px;
+  font-size: 64px;
+  font-weight: bold;
+  letter-spacing: var(---spacing);
+  color: #fff;
+}
+
+h2 {
+  margin: 5px 0;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: var(---spacing);
+  color: var(--dark-green);
+}
+
+p {
+  margin: 10px 0;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.section-center {
+  margin: 0 auto;
+  padding: 64px 0;
+  width: 85vw;
+  max-width: 1170px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.highlight {
+  color: var(--light-green);
+}
+
+/* ----------- HEADER ----------- */
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: #fff;
+  box-shadow: var(--shadow);
+}
+
+.logo {
+  width: 80px;
+  padding: 5px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  font-size: 17px;
+  font-weight: bold;
+  list-style: none;
+}
+
+.menu a {
+  color: black;
+}
+
+/* ----------- BANNER ----------- */
+.banner {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(
+      rgba(102, 147, 146, 0.6) 0%,
+      rgba(167, 221, 206, 0.6) 100%
+    ),
+    url(../images/banner.jpg) center/cover no-repeat;
+}
+
+.banner-text {
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.banner-btn {
+  margin: 20px 0;
+  padding: 16px 24px;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--dark-green);
+  border: 2px solid #fff;
+  outline: 2px solid #fff;
+  outline-offset: 5px;
+  transition: var(--transition);
+}
+
+.banner-btn:hover {
+  background: var(--green);
+}
+
+/* ----------- SECTIONS ----------- */
+.main-header h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--green);
+}
+
+.triple-img {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.section:nth-child(odd) {
+  background: var(--light-green);
+}
+
+.section-text {
+  width: 50%;
+  display: inline;
+}
+
+.section-img {
+  margin: 0 15px;
+  width: 50%;
+  display: inline;
+}
+
+.section-list {
+  margin: 10px 15px;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.center {
+  text-align: center;
+}
+
+.mov {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+/* ----------- FORM ----------- */
+input,
+textarea {
+  margin: 5px 0;
+  padding: 5px;
+  border: none;
+  background: var(--light-green);
+  border-radius: var(--radius);
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--dark-green);
+}
+
+.form {
+  max-width: 400px;
+}
+
+.form-field {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 5px 10px;
+  padding: 8px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--dark-green);
+  border: none;
+}
+
+/* ----------- TABLE ----------- */
+.table {
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.table th,
+td {
+  padding: 10px;
+}
+
+.table tr:first-child {
+  border-top: 1px solid var(--dark-green);
+  border-bottom: 1px solid var(--dark-green);
+}
+
+.table tr {
+  border-bottom: 1px solid var(--dark-green);
+}
+
+.table tr:nth-of-type(odd) {
+  background: #fff;
+}
+
+/* ----------- FOOTER ----------- */
+.footer {
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  background: var(--dark-green);
+  clear: both;
+}

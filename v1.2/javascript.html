@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Language" content="pl" />
+    <meta name="Author" content="Paulina Hryciuk" />
+    <title>Javascript | Hodowla żółwia wodnego</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./javascript/kolorujTlo.js"></script>
+    <script src="./javascript/timeDate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  </head>
+  <body onload="startClock()">
+    <header class="header">
+      <a href="index.html">
+        <img src="./images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav>
+        <ul class="menu">
+          <li><a href="./index.html" class="menu-item">O żółwiach</a></li>
+          <li><a href="./gatunki.html" class="menu-item">Gatunki</a></li>
+          <li><a href="./akwarium.html" class="menu-item">Akwarium</a></li>
+          <li><a href="./zywienie.html" class="menu-item">Żywienie</a></li>
+          <li><a href="./zdrowie.html" class="menu-item">Zdrowie</a></li>
+          <li><a href="./kontakt.html" class="menu-item">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="banner">
+      <h1>Hodowla żółwia wodnego</h1>
+      <p class="banner-text">
+        Na naszej stronie dowiesz się wszystkich potrzebnych informacji!
+      </p>
+      <a href="#start" class="banner-btn">Przeglądaj</a>
+    </div>
+
+    <div id="start"></div>
+    <section class="section">
+      <div class="section-center">
+        <div class="main-header">
+          <h1>Javascript</h1>
+        </div>
+
+        <div class="section-text">
+          <h2 class="center">Zmiana koloru tła</h2>
+          <form method="post" name="background" class="center">
+            <input
+              type="button"
+              value="Żółty"
+              class="color-btn"
+              onclick="changeBackground('#fff000')"
+              class="colo-btn"
+            />
+            <input
+              type="button"
+              value="Czarny"
+              class="color-btn"
+              onclick="changeBackground('#000000')"
+            />
+            <input
+              type="button"
+              value="Biały"
+              class="color-btn"
+              onclick="changeBackground('#ffffff')"
+            />
+            <input
+              type="button"
+              value="Zielony"
+              class="color-btn"
+              onclick="changeBackground('#00ff00')"
+            />
+            <input
+              type="button"
+              value="Niebieski"
+              class="color-btn"
+              onclick="changeBackground('#000ff')"
+            />
+            <input
+              type="button"
+              value="Pomarańczowy"
+              class="color-btn"
+              onclick="changeBackground('#ff9000')"
+            />
+            <input
+              type="button"
+              value="Szary"
+              class="color-btn"
+              onclick="changeBackground('#c0c0c0')"
+            />
+            <input
+              type="button"
+              value="Czerwony"
+              class="color-btn"
+              onclick="changeBackground('#ff0000')"
+            />
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-center flex">
+        <div>
+          <h2>Aktualny czas</h2>
+          <div id="zegarek"></div>
+        </div>
+        <div>
+          <h2>Aktualna data</h2>
+          <div id="data"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <a href="./javascript.html" class="highlight">Javascript</a> | &copy; 2022
+      <span class="highlight">Hodowla żółwia wodnego</span>
+    </footer>
+    <script src="./javascript/animacje.js"></script>
+  </body>
+</html>

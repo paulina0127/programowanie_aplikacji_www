@@ -1,0 +1,90 @@
+/* ----------- BUTTON ----------- */
+input#theme {
+  display: none;
+}
+
+label[for="theme"] {
+  padding: 10px;
+  position: fixed;
+  top: 12px;
+  right: 80px;
+  z-index: 1;
+  border: 1px solid var(--black);
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.fa-sun {
+  font-size: 25px;
+  color: #e8cf14;
+  text-shadow: 0 0 20px #e8cf14;
+  transform: translateX(-25px);
+}
+
+.fa-moon {
+  font-size: 25px;
+  color: var(--white);
+  text-shadow: 0 0 20px var(--white);
+  transform: translateX(0);
+  opacity: 0;
+}
+
+#theme:checked ~ label[for="theme"] {
+  border-color: var(--white);
+}
+
+#theme:checked ~ label > .fa-sun {
+  opacity: 0;
+  transform: translateX(0);
+}
+
+#theme:checked ~ label > .fa-moon {
+  opacity: 1;
+  transform: translateX(25px);
+}
+
+/* ----------- HEADER ----------- */
+#theme:checked ~ .header {
+  background: var(--black);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+#theme:checked ~ .header .menu a {
+  color: var(--white);
+}
+
+/* ----------- SECTIONS ----------- */
+#theme:checked ~ .section h2 {
+  color: var(--green);
+}
+
+#theme:checked ~ .section .main-header h1 {
+  color: var(--dark-green);
+}
+
+#theme:checked ~ .section:nth-child(even),
+#theme:checked ~ .section .table tr:nth-of-type(odd) {
+  background: var(--black);
+}
+
+#theme:checked ~ .section:nth-child(odd),
+#theme:checked ~ .section .form-field input,
+#theme:checked ~ .section .form-field textarea {
+  background: var(--dm-green);
+}
+
+#theme:checked ~ .section .section-text p,
+#theme:checked ~ .section .section-text .section-list,
+#theme:checked ~ .section .table,
+#theme:checked ~ .section .form-field label,
+#theme:checked ~ .section .form-field input,
+#theme:checked ~ .section .form-field textarea {
+  color: var(--white);
+}
+
+#theme:checked ~ .section .table tr {
+  border-bottom: 1px solid var(--light-green);
+}
+#theme:checked ~ .section .table tr:first-child {
+  border-top: 1px solid var(--light-green);
+}
